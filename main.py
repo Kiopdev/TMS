@@ -1,8 +1,7 @@
+import os
 import discord
 from discord.ext import commands
 import random
-import os
-bot.run(os.getenv("BOT_TOKEN"))
 
 intents = discord.Intents.default()
 intents.message_content = True
@@ -10,18 +9,16 @@ intents.message_content = True
 bot = commands.Bot(command_prefix="tms ", intents=intents)
 
 # CONFIGURATION
-selected_channel_id = 1300393390738898964  # Replace with your selected channel ID
+selected_channel_id = 1300393390738898964
 bypass_role_name = "bypass.exe"
 
 # In-memory databases
 balances = {}
 unlimited_users = set()
 
-# Check for correct channel
 async def is_valid_channel(ctx):
     return ctx.channel.id == selected_channel_id
 
-# Check if user has bypass role
 def has_bypass_role(ctx):
     return any(role.name == bypass_role_name for role in ctx.author.roles)
 
@@ -91,5 +88,4 @@ async def unlimited(ctx):
     unlimited_users.add(str(ctx.author.id))
     await ctx.send(f"{ctx.author.mention} ko ab Unlimited TMS POINTS mil gaye hai!")
 
-# Run the bot
-bot.run("MTM2NDYxOTMzNTc1MDEyNzY3Nw.GicASY.UN9L8sY9NgGiE9jR_T91ejE3SG1UkT4qlbcQRI ")  # Replace with your actual bot token
+bot.run(os.getenv("BOT_TOKEN"))
