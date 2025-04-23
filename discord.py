@@ -8,7 +8,7 @@ intents.message_content = True
 bot = commands.Bot(command_prefix="tms ", intents=intents)
 
 # CONFIGURATION
-selected_channel_id = 123456789012345678  # Replace with your selected channel ID
+selected_channel_id = 1300393390738898964  # Replace with your selected channel ID
 bypass_role_name = "bypass.exe"
 
 # In-memory databases
@@ -90,4 +90,4 @@ async def unlimited(ctx):
     await ctx.send(f"{ctx.author.mention} ko ab Unlimited TMS POINTS mil gaye hai!")
 
 # Run the bot
-bot.run("YOUR_BOT_TOKEN")  # Replace with your actual bot token
+bot.run("MTM2NDYxOTMzNTc1MDEyNzY3Nw.GicASY.UN9L8sY9NgGiE9jR_T91ejE3SG1UkT4qlbcQRI ")  # Replace with your actual bot token
